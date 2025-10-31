@@ -1,0 +1,42 @@
+.gradient-text {
+  background: linear-gradient(90deg, #8750F7 0%, #FFFFFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* swipper  */
+
+.swiper{
+  border: 1px solid black;
+}
+
+.swiper-button-prev{
+  left: -5px !important; 
+}
+
+.swiper-button-next{
+  right: -5px !important; 
+}
+
+/* Reduce Swiper navigation button size */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 25pximportant;
+  height: 25px!important;
+  color: white; /* optional: change color */
+  font-size: 16px; /* optional: reduce icon size */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 30px!important; 
+  font-weight: bolder;
+}
+
+.hov-border:hover
+{
+  border: 1px solid #8750F7;
+}

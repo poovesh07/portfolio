@@ -1,0 +1,2139 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO Expert Section</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+
+      .custom-gradient {
+        background: linear-gradient(
+          132.71deg,
+          #cd1e28 3.23%,
+          #bd2534 13.22%,
+          #29629f 104.19%
+        );
+      }
+
+      /* .active {
+        font-weight: bold;
+        background-color: #FFE2E2;
+      } */
+      .arrow-icon {
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+      }
+      .active .arrow-icon {
+        display: block;
+      }
+
+      /* logo slider */
+
+      @keyframes firstScroll2 {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 14));
+        }
+      }
+
+      .firstSlider2 {
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .firstSlide-track2 {
+        animation: firstScroll2 15s linear infinite;
+        display: flex;
+        width: calc(200px * 24); /* Updated for duplicated slides */
+        animation-play-state: running; /* Initial state */
+        /*gap:20px;*/
+      }
+
+      .firstSlide2 img {
+        display: block; /* This removes any default whitespace below images */
+        width: 80%; /* Ensures the image takes up the full width of the slide */
+        height: auto; /* Keeps the aspect ratio of the image */
+      }
+
+      .firstSlide2 {
+        /*padding-right: 20px;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .firstSlide2 img {
+          display: block;
+          min-width: 70%;
+          height: auto;
+        }
+      }
+
+      .custom-border {
+        position: relative;
+        border-radius: 12px;
+        background: #fff7f7;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .custom-border.active::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        padding: 2px;
+        background: linear-gradient(
+          132.71deg,
+          #cd1e28 3.23%,
+          #bd2534 13.22%,
+          #29629f 104.19%
+        );
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+      @media (min-width: 426px) {
+        .active {
+          position: relative;
+          border-radius: 12px;
+          background: #fff;
+          transition: background-color 0.3s ease-in-out;
+        }
+
+        .active::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 10px;
+          padding: 2px;
+          background: linear-gradient(
+            132.71deg,
+            #cd1e28 3.23%,
+            #bd2534 13.22%,
+            #29629f 104.19%
+          );
+          -webkit-mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
+          pointer-events: none;
+        }
+      }
+
+      .gradient-text {
+        background: linear-gradient(
+          111.5deg,
+          #cd1e28 30.18%,
+          #29629f 64.15%,
+          #29629f 84.72%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      #image-container {
+        position: sticky;
+        top: 100px;
+        height: fit-content;
+      }
+
+      /* Why seo expert in india */
+
+      .timeline-dot {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: white;
+      }
+
+      .timeline-dot::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(
+          132.71deg,
+          #cd1e28 3.23%,
+          #bd2534 13.22%,
+          #29629f 104.19%
+        );
+      }
+
+      @media (max-width: 768px) {
+        .timeline-dot {
+          left: 0;
+        }
+      }
+
+      /* Case Study */
+      /* #prev {
+width: 110px;
+      }
+
+      #next {
+        width: 110px;
+      } */
+      /* testimonial */
+
+      #sliders {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slides {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+      }
+
+      #slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .h2,
+      .button {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+      }
+      .custom-border-parent {
+        border: 2px solid #cd1e28; /* Customize the border color */
+        border-radius: 10px; /* Optional: Adjust border radius */
+      }
+      /* #prevTestimonial{
+        width: 110px;
+      }
+      #nextTestimonial{
+        width: 110px;
+      } */
+
+      #slider .slide {
+        border-radius: 20px;
+        background-position: center;
+      }
+
+      #Our__success {
+        -moz-text-fill-color: unset !important;
+        background: unset !important;
+        background-clip: unset !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: unset !important;
+        text-fill-color: unset !important;
+        color: #000000;
+      }
+
+      #Our_success {
+        -moz-text-fill-color: unset !important;
+        background: unset !important;
+        background-clip: unset !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: unset !important;
+        text-fill-color: unset !important;
+        color: #ffffff;
+      }
+
+      .faqseohead {
+        border-radius: unset !important;
+      }
+
+      .faqseohead:hover,
+      .faqseohead:focus {
+        color: #000000 !important;
+        background-color: unset !important;
+        border-color: unset !important;
+      }
+      #seoexindiaform:focus,
+      #seoexindiaform:hover {
+        color: #fff !important;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+
+    <section
+      class="bg-white py-12 md:px-6 px-3 w-full flex flex-col items-center">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-[50%] text-left">
+          <h1
+            class="font-inter font-extrabold text-[26px] leading-[39px] text-black md:text-[42px] md:leading-[53.2px]">
+            Best SEO Expert in India to Grow Business 10x Organically
+          </h1>
+          <p
+            class="mt-4 font-inter font-medium text-[16px] leading-[27px] text-black text-left md:text-justify md:text-[18px] md:leading-[30.6px]">
+            A SEO Expert In India Helps Software Companies Grow Organically By
+            Optimizing Content, Backlinks, And Technical SEO. They Focus On
+            Keyword Research, Competitor Analysis, And Conversion-Driven
+            Strategies To Boost Rankings And Traffic.
+          </p>
+          <div class="flex items-center gap-4 mt-4">
+            <img
+            alt="clutch"
+              src="https://the7eagles.com/wp-content/uploads/2024/10/Group-427323584_result.webp"
+              class="max-w-[45%] md:max-w-[30%]" />
+
+            <img
+            alt="clutch-icon"
+              src="https://the7eagles.com/wp-content/uploads/2024/10/Group-427323582_result.webp"
+              class="max-w-[45%] md:max-w-[30%]" />
+          </div>
+          <a
+            href="https://the7eagles.com/seo-contact-us/"
+            target="_blank"
+            id="seoexindiaform"
+            class="mt-6 inline-block customPopupTrigger custom-gradient font-inter font-bold text-white text-[20px]l eading-[30px] py-3 px-6 rounded-full transition md:self-start hidden md:inline-block">
+            Get Free Consultation
+          </a>
+        </div>
+        <div class="md:w-[50%] flex justify-center">
+          <img
+            src="https://the7eagles.com/wp-content/uploads/2025/02/Frame-1618872763_resultC-Users-LENOVO-Downloads--scaled-e1739783714587.webp"
+            alt="SEO Expert" />
+        </div>
+        <a
+          href="https://the7eagles.com/seo-contact-us/"
+          target="_blank"
+          id="seoexindiaform"
+          class="inline-block custom-gradient customPopupTrigger font-inter font-bold text-white text-[16px] md:text-[20px] leading-[30px] py-3 px-6 rounded-full transition md:self-start block md:hidden">
+          Get Free Consultation
+        </a>
+      </div>
+
+      <!-- Statistics Section -->
+      <div
+        class="mt-12 flex flex-row justify-center items-center md:px-6 md:py-6 px-0 py-6 rounded-2xl w-full max-w-6xl mx-auto text-white custom-gradient gap-[2px] md:gap-0">
+        <div class="flex-1 text-center">
+          <p
+            class="font-inter font-semibold md:text-[38px] md:leading-[48px] text-[15px] leading-[14px] text-white">
+            13+
+          </p>
+          <p
+            class="font-inter font-medium md:text-[24px] md:leading-[28px] text-[13px] leading-[8px] tracking-[0px] text-white py-2">
+            Experience
+          </p>
+        </div>
+        <div class="block h-12 w-px bg-white opacity-50"></div>
+        <!-- Vertical Line for Desktop -->
+        <div class="flex-1 text-center">
+          <p
+            class="font-inter font-semibold md:text-[38px] md:leading-[48px] text-[15px] leading-[14px] text-white">
+            200+
+          </p>
+          <p
+            class="font-inter font-medium md:text-[24px] md:leading-[28px] text-[13px] leading-[8px] tracking-[0px] text-white py-2">
+            Clients in World
+          </p>
+        </div>
+        <div class="block h-12 w-px bg-white opacity-50"></div>
+        <!-- Vertical Line for Desktop -->
+        <div class="flex-1 text-center">
+          <p
+            class="font-inter font-semibold md:text-[38px] md:leading-[48px] text-[15px] leading-[14px] text-white">
+            10+
+          </p>
+          <p
+            class="font-inter font-medium md:text-[24px] md:leading-[28px] text-[13px] leading-[8px] tracking-[0px] text-white py-2">
+            Countries
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 px-6 bg-[#F6F6F6]">
+      <p
+        class="font-inter font-bold md:text-[24px] md:leading-[64px] text-[20px] leading-[24px] text-[#8A8894] text-center">
+        See how top eCommerce brands scaled with us
+      </p>
+      <div class="firstSlider2">
+        <div class="firstSlide-track2">
+          <!-- Original slides -->
+
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324124_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324125_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324126_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324127_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324128_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324129_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324131_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324132_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324133_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324134_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324135_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324136_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <!-- Duplicate slides -->
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324124_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324125_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324126_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324127_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324128_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324129_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324131_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324132_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324133_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324134_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324135_resultD-logo-.webp"
+              alt="" />
+          </div>
+          <div class="firstSlide2">
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/01/Group-427324136_resultD-logo-.webp"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Section -->
+
+    <section class="bg-[#F9FCFF] pt-12 md:px-6 px-3">
+      <div
+        class="font-inter font-bold md:text-[36px] md:leading-[54px] text-[22px] leading-[33px] mb-6 text-center text-black"
+        id="Our__success">
+        Our success stories
+      </div>
+      <div id="body" class="lg:mx-10 mx-2">
+        <div class="relative w-full rounded-lg overflow-x-hidden">
+          <div id="slider" class="">
+            <!-- Slides will be inserted dynamically here -->
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex sm:justify-end justify-center gap-x-3 my-2">
+          <img
+            src="https://the7eagles.com/wp-content/uploads/2025/02/arrow_circle_right.png"
+            class="w-[50px] h-[50px]"
+            id="prev"
+            alt="" />
+
+          <img
+            id="next"
+            src="https://the7eagles.com/wp-content/uploads/2025/02/arrow_circle_right-1.png"
+            class="w-[50px] h-[50px]"
+            alt="" />
+        </div>
+
+        <script>
+          const slider = document.getElementById("slider");
+          const prev = document.getElementById("prev");
+          const next = document.getElementById("next");
+          let index = 0;
+
+          // Dynamic slide data
+          const slides = [
+            {
+              image:
+                "https://the7eagles.com/wp-content/uploads/2024/10/Group-427323427_result-scaled.webp",
+              title: "How we increased SaaS conversion rates by 40%?",
+              points: [
+                "Changing pricing plans led to a 35% increase in free trial sign-ups.",
+                "Transforming User Experience: Reducing Churn by 20% and Elevating Customer Satisfaction.",
+                "Simple onboarding steps improved user experience and boosted conversions by 50%",
+              ],
+              link: "https://the7eagles.com/seo-case-studies/how-we-increased-saas-conversion-rates-by-40-percentage/",
+            },
+            {
+              image:
+                "https://the7eagles.com/wp-content/uploads/2024/10/O-View.webp",
+              title:
+                "How we boosted MRR by 30% through SaaS SEO in just 6 Months?",
+              points: [
+                "How our well-rounded content strategy improved SQLs to Customer-conversion rate by 15%?",
+                "How we enhanced MQL by 40% and SQL by 22% with better keyword targeting?",
+                "How did we increase the number of keywords ranking on the first page from 10 to 40 and 12 in the first three positions?",
+              ],
+              link: "https://the7eagles.com/seo-case-studies/boosting-mqls-sqls-mrr-with-saas-seo-in-six-months/",
+            },
+            {
+              image:
+                "https://the7eagles.com/wp-content/uploads/2024/10/Amadeus-Hospitality-case-study-5-scaled.webp",
+              title:
+                "How Amadeus Hospitality transformed MQL, SQL and MRR with SaaS SEO?",
+              points: [
+                "How we enhanced MQL by 40% and SQL by 35% with targeted content and keyword optimization?",
+                "How did we drop the page load time to 1.9s and improve the overall site performance?",
+                "How Amadeus witnessed enhanced engagement metrics with our SaaS Technical SEO improvements?",
+              ],
+              link: "https://the7eagles.com/seo-case-studies/boosting-mqls-sqls-mrr-with-saas-seo-in-six-months/",
+            },
+          ];
+
+          function loadSlides() {
+            slider.innerHTML = "";
+            slides.forEach((slide) => {
+              slider.innerHTML += `
+                      <div class="slide sm:hidden block object-fit bg-[url(https://the7eagles.com/wp-content/uploads/2025/02/mobilebg_resultC-Users-LENOVO-Downloads-vivek-bose2-slider-.webp)] bg-cover rounded-lg p-5 text-white">
+                          <div id="Our_success"class="font-inter font-bold text-[22px] leading-[26px] lg:hidden block my-2 h2" id="Our_success">${
+                            slide.title
+                          }</div>
+                          <div class="w-full flex flex-col  justify-center lg:px-6 px-1">
+                              <ul class="list-disc">
+                                  ${slide.points
+                                    .map(
+                                      (point) =>
+                                        `<li class="py-2 font-inter font-normal md:text-[18px] md:leading-[29px] text-[16px] leading-[27px]">${point}</li>`
+                                    )
+                                    .join("")}
+                              </ul>
+                          </div>
+                          <div class="flex flex-col gap-x-5">
+                              <div class="w-full">
+                                  <img src="${
+                                    slide.image
+                                  }" alt="Slide Image" class="rounded-lg w-full">
+                              </div>
+                          </div>
+                          <div class="lg:text-end text-center mt-5">
+                              <span class="bg-white md:p-5 px-4 py-3 rounded-3xl">
+                                  <span class="button font-bold gradient-text">
+                                      Read More →
+                                  </span>
+                              </span>
+                          </div>
+                      </div>
+      
+                      <div class="slide sm:block hidden bg-[url(https://the7eagles.com/wp-content/uploads/2024/12/Group-427323425_resultC-Users-LENOVO-Downloads--scaled.webp)] bg-cover rounded-lg p-8 text-white">
+                          <div id="Our_success" class="font-inter font-bold text-[16px] leading-[26px] lg:hidden block my-2 h2">${
+                            slide.title
+                          }</div>
+                          <div class="flex gap-x-5">
+                              <div class="w-1/2">
+                                  <img src="${
+                                    slide.image
+                                  }" alt="Slide Image" class="rounded-lg w-full">
+                              </div>
+                              <div class="w-1/2 flex flex-col justify-center lg:px-6 px-1">
+                                  <div id="Our_success" class="lg:block hidden font-inter font-bold text-[22px] leading-[26px] h2">${
+                                    slide.title
+                                  }</div>
+                                  <ul class="list-disc mt-4">
+                                      ${slide.points
+                                        .map(
+                                          (point) =>
+                                            `<li class="pt-2 font-inter font-normal md:text-[18px] md:leading-[29px] text-[16px] leading-[27px]">${point}</li>`
+                                        )
+                                        .join("")}
+                                  </ul>
+                                  <div class="flex lg:justify-end justify-start mt-5">
+                                      <span class="bg-white flex item-center w-fit p-3 px-5 rounded-3xl ">
+                                          <a href="${
+                                            slide.link
+                                          }" class="button font-bold gradient-text">
+                                            Read More
+                                          </a>
+                                          // <img size="10" src="https://the7eagles.com/wp-content/uploads/2025/02/arraow.svg" />
+                                      </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      `;
+            });
+          }
+
+          loadSlides();
+
+          function updateSlidePosition() {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+          }
+
+          next.addEventListener("click", () => {
+            index = (index + 1) % slides.length;
+            updateSlidePosition();
+          });
+
+          prev.addEventListener("click", () => {
+            index = (index - 1 + slides.length) % slides.length;
+            updateSlidePosition();
+          });
+        </script>
+      </div>
+    </section>
+
+    <section class="bg-[#F9FCFF] py-12 md:px-6 px-3">
+      <div class="max-w-6xl mx-auto text-center mb-10">
+        <h2
+          class="font-inter font-bold md:text-[36px] md:leading-[54px] text-[22px] leading-[33px] text-black"
+          id="Our__success">
+          SEO Expert in India - Your Go-to person
+        </h2>
+        <p
+          class="font-inter font-semibold md:text-[18px] text-[16px] leading-[27px] text-[#29629F] mt-2">
+          Looking to rank your website in search engines? Is your traditional
+          SEO technique not giving you results?
+        </p>
+      </div>
+
+      <div class="md:w-1/3 md:hidden">
+        <img
+          src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002761_resultC-Users-LENOVO-Downloads-.webp"
+          alt="Ashkar Gomez" />
+      </div>
+
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:mt-6 mt-2">
+        <div class="md:w-2/3 text-gray-800">
+          <p
+            class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#000000]">
+            Wondering how to improve your organic traffic? Need someone who is a
+            leader in the search engine industry to solve this puzzle for you?
+          </p>
+          <p
+            class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#000000] mt-4">
+            If your answer to all those questions is yes, then you have landed
+            on the correct webpage. Meet
+            <span
+              class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#CD1E28]"
+              >Mr. Ashkar Gomez</span
+            >, one of the best SEO experts in India. Having
+            <span
+              class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#CD1E28]"
+              >13+ years of experience</span
+            >
+            in advanced SEO services, he has handled
+            <span
+              class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#CD1E28]"
+              >200+ reputed clients in over 10 countries</span
+            >.
+          </p>
+          <p
+            class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#000000] mt-4">
+            Honestly, SEO is a long-term strategy like investing in stocks. Have
+            you ever been surprised to know that the Infosys shares have
+            provided 113 times returns in the last 20 years?
+          </p>
+        </div>
+        <div class="md:w-1/3 flex justify-center hidden md:flex">
+          <img
+            src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002761_resultC-Users-LENOVO-Downloads-.webp"
+            alt="Ashkar Gomez" />
+        </div>
+      </div>
+
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 mt-8 text-gray-800">
+        <div class="md:w-1/3">
+          <img
+            src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002762_resultC-Users-LENOVO-Downloads-.webp"
+            alt="SEO Traffic Stats"
+            class="w-full rounded-lg" />
+        </div>
+        <div class="md:w-2/3">
+          <p
+            class="font-inter font-semibold md:text-[18px] text-justify text-[16px] leading-[27px] text-[#000000]">
+            Likewise, there are many websites whose traffic was just 1000-3000
+            ten years ago. With amazing SEO strategies and techniques, the same
+            website currently acquires about 2-3 million organic traffic every
+            month.
+          </p>
+          <p
+            class="font-inter font-semibold md:text-[18px] text-justify text-[16px] leading-[27px] text-[#000000] mt-4">
+            Personally, Ashkar has worked with top brands in India for specific
+            niches like real estate, technology, SaaS, Marketing/B2B servicing,
+            D2C (Skin care, FMCG, Food brands), Interior designing, Fintech, and
+            Edutech.
+          </p>
+          <p
+            class="font-inter font-semibold md:text-[18px] text-justify text-[16px] leading-[27px] text-[#000000] mt-4">
+            He has personally assisted his team from scratch through 6 months of
+            intensive internship program on SEO and currently hired 17+ SEO
+            experts under him.
+          </p>
+          <p
+            class="font-inter font-semibold md:text-[18px] text-justify text-[16px] leading-[27px] text-[#000000] mt-4">
+            Despite this, his passion was to create a knowledgeable crowd for
+            the SEO industry and has launched an
+            <span
+              class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#29629F]"
+              ><a href="https://the7eagles.com/academy/online-seo-course/"
+                >online SEO course</a
+              ></span
+            >
+            a year back, training more than 500 students and supporting them
+            with an agency mentorship program to help them understand what it
+            takes to run a successful
+            <span
+              class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#29629F]"
+              ><a href="https://the7eagles.com/india/"
+                >digital marketing agency in India.</a
+              ></span
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+	 
+
+
+    <!-- CTA Button  -->
+
+    <section
+      class="relative py-8 md:px-6 px-3 text-white bg-cover bg-center bg-no-repeat flex flex-col items-center text-center"
+      style="
+        background-image: url('https://the7eagles.com/wp-content/uploads/2025/02/image-7_resultC-Users-LENOVO-Downloads--scaled.webp');
+      ">
+      <div class="max-w-4xl">
+        <p
+          class="font-inter font-bold text-[18px] md:text-[34px] leading-[27px] md:leading-[51px] text-white">
+          You can be my next Hall of Fame, take the right action
+        </p>
+      </div>
+      <div class="mt-6">
+        <a
+          href="https://the7eagles.com/seo-contact-us/"
+          target="_blank"
+          id="seoexindiaform"
+          class="bg-white py-3 px-6 rounded-full customPopupTrigger shadow-md border border-gray-300 inline-block">
+          <span class="font-bold gradient-text"> Book a Consultation </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+
+    <section class="bg-white py-12">
+      <h2
+        class="font-inter text-center font-bold md:text-[36px] md:leading-[54px] text-[22px] leading-[33px] mb-3 text-black"
+        id="Our__success">
+        Testimonials
+      </h2>
+      <div id="testimonialContainer" class="lg:mx-10 mx-2 lg:my-10 h-full my-5">
+        <div class="relative w-full rounded-lg overflow-hidden">
+          <div
+            id="testimonialSlider"
+            class="flex transition-transform duration-500 ease-in-out">
+            <!-- Slides will be inserted dynamically here -->
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-end gap-x-3 my-2">
+          <img
+            src="https://the7eagles.com/wp-content/uploads/2025/02/arrow_circle_right.png"
+            class="w-[50px] h-[50px]"
+            id="prevTestimonial"
+            alt="Previous" />
+
+          <img
+            src="https://the7eagles.com/wp-content/uploads/2025/02/arrow_circle_right-1.png"
+            class="w-[50px] h-[50px]"
+            id="nextTestimonial"
+            alt="Next" />
+        </div>
+
+        <script>
+          const testimonialSlider =
+            document.getElementById("testimonialSlider");
+          const prevTestimonial = document.getElementById("prevTestimonial");
+          const nextTestimonial = document.getElementById("nextTestimonial");
+          let currentIndex = 0;
+          let cardsPerSlide = window.innerWidth >= 1024 ? 2 : 1;
+
+          const testimonials = [
+            {
+              name: "Vrushank Vyas",
+              role: "Director of Oizom",
+              testimonial:
+                "7 Eagles is a valuable partner in our digital growth. Their work made a real difference in increasing our search visibility and driving traffic.",
+              image:
+                "https://the7eagles.com/wp-content/uploads/2024/10/Ellipse-2265.png",
+              logo1:
+                "https://the7eagles.com/wp-content/uploads/2024/10/Mask-group-4_result.webp",
+              logo2:
+                "https://the7eagles.com/wp-content/uploads/2024/10/99_result.webp",
+            },
+            {
+              name: "Bertrand Motte",
+              role: "Product Marketing Manager",
+              testimonial:
+                "The 7 Eagles team is very knowledgeable and highly skilled. They have a deep understanding of SEO best practices.",
+              image:
+                "https://the7eagles.com/wp-content/uploads/2024/12/Ellipse-2260.png",
+              logo1:
+                "https://the7eagles.com/wp-content/uploads/2024/10/amadeus-logo-dark-sky-1.svg",
+              logo2:
+                "https://the7eagles.com/wp-content/uploads/2024/10/99_result.webp",
+            },
+            {
+              name: "Trent Walker",
+              role: "Marketing Manager",
+              testimonial:
+                "The 7 Eagles team is highly skilled and helped us achieve our marketing goals.",
+              image:
+                "https://the7eagles.com/wp-content/uploads/2024/12/Ellipse-2261.png",
+              logo1:
+                "https://the7eagles.com/wp-content/uploads/2024/10/Group-427323098_result.webp",
+              logo2:
+                "https://the7eagles.com/wp-content/uploads/2024/10/99_result.webp",
+            },
+            {
+              name: "Jayashree Venkataraman",
+              role: "CEO",
+              testimonial:
+                "7Eagles impressed us with its ability to deliver results on time and keep us informed throughout the process. Their results speak for themselves.",
+              image:
+                "https://the7eagles.com/wp-content/uploads/2024/12/Ellipse-2263.png",
+              logo1:
+                "https://the7eagles.com/wp-content/uploads/2024/10/Mask-group-3_result.webp",
+              logo2:
+                "https://the7eagles.com/wp-content/uploads/2024/10/99_result.webp",
+            },
+            {
+              name: " Ravi Kumar Sapata",
+              role: "Founder / CEO",
+              testimonial:
+                "Overall, the SEO strategy shows promise with room for growth. Prioritizing technical enhancements and content updates will enhance visibility and drive more organic traffic.",
+              image:
+                "https://the7eagles.com/wp-content/uploads/2024/12/Ellipse-2262.png",
+              logo1:
+                "https://the7eagles.com/wp-content/uploads/2024/10/Group-427322649-1_result.webp",
+              logo2:
+                "https://the7eagles.com/wp-content/uploads/2024/10/99_result.webp",
+            },
+            {
+              name: "Kislay Keshari",
+              role: "Marketing Manager",
+              testimonial:
+                "The SEO expertise of 7 Eagles greatly boosted our visibility and the results truly exceeded our expectations. The team is highly recommended due to their professionalism and results-oriented approaches.",
+              image:
+                "https://the7eagles.com/wp-content/uploads/2024/12/Ellipse-2263.png",
+              logo1:
+                "https://the7eagles.com/wp-content/uploads/2024/10/Mask-group-4_result.webp",
+              logo2:
+                "https://the7eagles.com/wp-content/uploads/2024/10/99_result.webp",
+            },
+          ];
+
+          function renderTestimonials() {
+            testimonialSlider.innerHTML = "";
+            for (let i = 0; i < testimonials.length; i += cardsPerSlide) {
+              let slideContent = `<div class="testimonial-slide w-full flex-shrink-0 flex ${
+                cardsPerSlide === 1 ? "flex-col" : "gap-5"
+              }">`;
+
+              for (
+                let j = i;
+                j < i + cardsPerSlide && j < testimonials.length;
+                j++
+              ) {
+                slideContent += `
+                    <div class="border rounded-xl flex flex-col justify-between overflow-hidden ${
+                      cardsPerSlide === 1 ? "w-full" : "w-1/2"
+                    }">
+                        <div class="p-5">
+                            <div class="flex justify-between">
+                                <img src="${
+                                  testimonials[j].logo1
+                                }" class="h-[38px] w-[20%]" />
+                                <img src="${
+                                  testimonials[j].logo2
+                                }" class="h-[38px] w-[38px]" />
+                            </div>
+                            <p class="py-3 font-medium">${
+                              testimonials[j].testimonial
+                            }</p>
+                        </div>
+                        <div class="bg-[#F9F9F9] px-5 py-2 flex items-center gap-5">
+                            <img src="${
+                              testimonials[j].image
+                            }" class="w-[80px] h-[80px]" />
+                            <div>
+                                <p class="font-bold text-xl">${
+                                  testimonials[j].name
+                                }</p>
+                                <p>${testimonials[j].role}</p>
+                            </div>
+                        </div>
+                    </div>
+                  `;
+              }
+              slideContent += `</div>`;
+              testimonialSlider.innerHTML += slideContent;
+            }
+          }
+
+          renderTestimonials();
+
+          function updateTestimonialPosition() {
+            const slideWidth =
+              document.querySelector(".testimonial-slide").clientWidth;
+            testimonialSlider.style.transform = `translateX(-${
+              currentIndex * slideWidth
+            }px)`;
+          }
+
+          nextTestimonial.addEventListener("click", () => {
+            const totalSlides = Math.ceil(testimonials.length / cardsPerSlide);
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateTestimonialPosition();
+          });
+
+          prevTestimonial.addEventListener("click", () => {
+            const totalSlides = Math.ceil(testimonials.length / cardsPerSlide);
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateTestimonialPosition();
+          });
+
+          window.addEventListener("resize", () => {
+            cardsPerSlide = window.innerWidth >= 1024 ? 2 : 1;
+            renderTestimonials();
+            updateTestimonialPosition();
+          });
+        </script>
+      </div>
+    </section>
+
+    <!-- Benefits of Hiring the Best SEO Analyst -->
+
+    <section class="bg-white pb-12 md:px-6 px-3">
+      <div class="max-w-6xl mx-auto text-center mb-10">
+        <h2
+          class="font-inter font-bold md:text-[36px] md:leading-[54px] text-[22px] leading-[33px] text-black"
+          id="Our__success">
+          Benefits of Hiring the Best SEO Analyst
+        </h2>
+      </div>
+      <div
+        class="flex-col lg:flex-row w-full gap-4 rounded-lg overflow-hidden md:flex hidden">
+        <!-- Left Side Content -->
+        <div
+          class="w-full md:w-2/3 lg:w-1/2 p-6 bg-[#FFE5E5] relative rounded-[30px]"
+          id="content-section">
+          <div class="flex gap-2">
+            <img
+            alt="image-30"
+              id="content-logo"
+              src="/images/one-1.svg"
+              class="w-10 h-10 mr-2" />
+            <div>
+              <h2
+                class="font-inter gradient-text font-bold text-[24px] leading-[36px]"
+                id="content-title">
+                Constructive SEO strategies
+              </h2>
+            </div>
+          </div>
+          <div>
+            <p
+              class="font-inter font-normal md:text-[18px] text-[16px] leading-[27px] text-[#000000] mt-4"
+              id="content-text">
+              The Best SEO Analyst can plan an effective, long-run constructive
+              SEO strategy to meet the specific needs to increase organic
+              traffic and ranking. This is achieved as the expert stays updated
+              with the latest trends, algorithms, and proven advanced practices.
+            </p>
+          </div>
+          <img
+            id="content-image"
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[55%] mt-[20px]"
+            src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002622_result-scaled.webp"
+            alt="SEO Strategy Image"
+            class="w-full h-[200px] object-cover mt-5" />
+        </div>
+
+        <!-- Right Side Menu -->
+        <div class="w-full md:w-1/3 lg:w-1/2 p-6 pt-0 relative">
+          <ul id="menu" class="space-y-4">
+            <li
+              class="flex items-center font-inter font-bold text-[18px] leading-[30px] text-[#444444] p-3 bg-white cursor-pointer relative bg-white border border-[0.5px] border-[#E2E2E2] rounded-[10px] shadow-[10px_10px_30px_rgba(0,_0,_0,_0.05),_-10px_-10px_30px_rgba(255,_255,_255,_0.49)] active"
+              onclick="updateContent(0)">
+              <div class="arrow-icon" id="arrow-0">
+                <img
+                  src="https://the7eagles.com/wp-content/uploads/2025/02/Polygon-3.png"
+                  class="w-4 h-4" />
+              </div>
+              <img
+                src="https://the7eagles.com/wp-content/uploads/2025/02/3206220-1.png"
+                class="w-4 h-4 mr-2" />
+              Constructive SEO strategies
+            </li>
+            <li
+              class="flex items-center font-inter font-bold text-[18px] leading-[30px] text-[#444444] p-3 bg-white bg-white border border-[0.5px] border-[#E2E2E2] rounded-[10px] shadow-[10px_10px_30px_rgba(0,_0,_0,_0.05),_-10px_-10px_30px_rgba(255,_255,_255,_0.49)] cursor-pointer relative"
+              onclick="updateContent(1)">
+              <div class="arrow-icon" id="arrow-1">
+                <img
+                  src="https://the7eagles.com/wp-content/uploads/2025/02/Polygon-3.png"
+                  class="w-4 h-4" />
+              </div>
+              <img
+                src="https://the7eagles.com/wp-content/uploads/2025/02/14404530-1.png"
+                class="w-4 h-4 mr-2" />
+              Get a Higher position in Search Engine Rankings
+            </li>
+            <li
+              class="flex font-inter font-bold text-[18px] leading-[30px] text-[#444444] items-center p-3 bg-white bg-white border border-[0.5px] border-[#E2E2E2] rounded-[10px] shadow-[10px_10px_30px_rgba(0,_0,_0,_0.05),_-10px_-10px_30px_rgba(255,_255,_255,_0.49)] cursor-pointer relative"
+              onclick="updateContent(2)">
+              <div class="arrow-icon" id="arrow-2">
+                <img
+                  src="https://the7eagles.com/wp-content/uploads/2025/02/Polygon-3.png"
+                  class="w-4 h-4" />
+              </div>
+              <img
+                src="https://the7eagles.com/wp-content/uploads/2025/02/17873275-1.png"
+                class="w-4 h-4 mr-2" />
+              Improve the quality of your traffic and gain more leads
+            </li>
+            <li
+              class="flex font-inter font-bold text-[18px] leading-[30px] text-[#444444] items-center p-3 bg-white bg-white border border-[0.5px] border-[#E2E2E2] rounded-[10px] shadow-[10px_10px_30px_rgba(0,_0,_0,_0.05),_-10px_-10px_30px_rgba(255,_255,_255,_0.49)] cursor-pointer relative"
+              onclick="updateContent(3)">
+              <div class="arrow-icon" id="arrow-3">
+                <img
+                  src="https://the7eagles.com/wp-content/uploads/2025/02/Polygon-3.png"
+                  class="w-4 h-4" />
+              </div>
+              <img
+                src="https://the7eagles.com/wp-content/uploads/2025/02/16743164-1.png"
+                class="w-4 h-4 mr-2" />
+              Enhanced User Experience
+            </li>
+            <li
+              class="flex font-inter font-bold text-[18px] leading-[30px] text-[#444444] items-center p-3 bg-white bg-white border border-[0.5px] border-[#E2E2E2] rounded-[10px] shadow-[10px_10px_30px_rgba(0,_0,_0,_0.05),_-10px_-10px_30px_rgba(255,_255,_255,_0.49)] cursor-pointer relative"
+              onclick="updateContent(4)">
+              <div class="arrow-icon" id="arrow-4">
+                <img
+                alt="image-10"
+                  src="https://the7eagles.com/wp-content/uploads/2025/02/Polygon-3.png"
+                  class="w-4 h-4" />
+              </div>
+              <img
+                src="https://the7eagles.com/wp-content/uploads/2025/02/8993248-1.png"
+                class="w-4 h-4 mr-2" />
+              Competitive Advantage
+            </li>
+            <li
+              class="flex font-inter font-bold text-[18px] leading-[30px] text-[#444444] items-center p-3 bg-white bg-white border border-[0.5px] border-[#E2E2E2] rounded-[10px] shadow-[10px_10px_30px_rgba(0,_0,_0,_0.05),_-10px_-10px_30px_rgba(255,_255,_255,_0.49)] cursor-pointer relative"
+              onclick="updateContent(5)">
+              <div class="arrow-icon" id="arrow-5">
+                <img
+                alt="image-10"
+                  src="https://the7eagles.com/wp-content/uploads/2025/02/Polygon-3.png"
+                  class="w-4 h-4" />
+              </div>
+              <img
+              alt="image-9"
+                src="https://the7eagles.com/wp-content/uploads/2025/02/18567306-1.png "
+                class="w-4 h-4 mr-2" />
+              Not impacted by Google Updates
+            </li>
+            <li
+              class="flex font-inter font-bold text-[18px] leading-[30px] text-[#444444] items-center p-3 bg-white bg-white border border-[0.5px] border-[#E2E2E2] rounded-[10px] shadow-[10px_10px_30px_rgba(0,_0,_0,_0.05),_-10px_-10px_30px_rgba(255,_255,_255,_0.49)] cursor-pointer relative"
+              onclick="updateContent(6)">
+              <div class="arrow-icon" id="arrow-6">
+                <img
+                alt="image-8"
+                  src="https://the7eagles.com/wp-content/uploads/2025/02/Polygon-3.png"
+                  class="w-4 h-4" />
+              </div>
+              <img
+              alt="image-7"
+                src="https://the7eagles.com/wp-content/uploads/2025/02/18699445-1.png"
+                class="w-4 h-4 mr-2" />
+              Cost effectiveness
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mobile View -->
+
+      <div class="max-w-3xl mx-auto md:hidden block">
+        <div class="space-y-4" id="accordion">
+          <!-- Dropdowns will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative py-8 md:px-6 px-3 text-white md:bg-cover bg-no-repeat bg-right md:bg-center"
+      style="
+        background-image: url('https://the7eagles.com/wp-content/uploads/2025/02/image-6_resultC-Users-LENOVO-Downloads--scaled.webp');
+      ">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div class="w-full md:w-2/3">
+          <p
+            class="font-inter font-bold text-[18px] text-center md:text-left md:text-[34px] leading-[27px] md:leading-[51px] pb-4 md:pb-0 text-white">
+            Sounds Interesting, Right? So why wait? We are one touch away from
+            helping you.
+          </p>
+        </div>
+        <div class="w-full md:w-1/3 flex md:justify-end justify-center">
+          <a
+            href="https://the7eagles.com/seo-contact-us/"
+            target="_blank"
+            id="seoexindiaform"
+            class="bg-white py-3 customPopupTrigger px-6 rounded-3xl shadow-md border border-gray-300 inline-block">
+            <span class="font-bold gradient-text"> Book a Consultation </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-12 md:px-6 px-3">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="font-inter font-bold md:text-[36px] md:leading-[54px] text-[22px] leading-[33px] text-black"
+          id="Our__success">
+          SaaS SEO Expert to scale your MQLs, SQLs, and Sales Pipeline
+        </h2>
+      </div>
+      <div class="md:hidden flex w-[70%] mx-auto mt-[20px]">
+        <img
+          src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002763_resultC-Users-LENOVO-Downloads-.webp"
+          alt="SaaS Marketing Growth" />
+      </div>
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 mt-6">
+        <div class="md:w-2/3 text-gray-800 text-lg">
+          <img
+            src="https://the7eagles.com/wp-content/uploads/2025/02/Group.svg"
+            alt="SaaS Marketing Growth"
+            class="w-[30px] ml-[20px] md:block hidden" />
+          <p
+            class="font-inter font-semibold md:text-[18px] text-[16px] leading-[27px] text-[#000000] text-justify mt-4">
+            As a founder of the world’s leading
+            <span
+              class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#29629F]"
+              ><a href="https://the7eagles.com/saas/seo-agency/"
+                >SaaS SEO agency</a
+              ></span
+            >, and working with 50+ SaaS companies, Ashkar has framed all
+            winning strategies on SEO to grow a SaaS product.
+          </p>
+          <p
+            class="mt-4 font-inter font-semibold md:text-[18px] text-[16px] leading-[27px] text-justify text-[#000000] mt-4">
+            Unlike typical SEO practices, SaaS SEO is focused on MQLs, PQLs, and
+            SQLs, rather than just organic traffic or keyword position.
+          </p>
+          <p
+            class="mt-4 font-inter font-semibold md:text-[18px] text-[16px] leading-[27px] text-justify text-[#000000] mt-4">
+            Most likely, every SaaS product is new to the market, and the
+            keyword search volume is very low in numbers or hard to find a
+            handful of keywords.
+          </p>
+          <p
+            class="mt-4 font-inter font-semibold md:text-[18px] text-[16px] leading-[27px] text-justify text-[#000000] mt-4">
+            The only way of reaching the brand with the target ICP is by pulling
+            out intent-based, pain-point, solution-based, and platform-based
+            keywords (e.g., Zapier writes about SEO as they integrate SEMrush
+            with Slack), and alternatives-based keywords.
+          </p>
+          <p
+            class="mt-4 font-inter font-semibold md:text-[18px] text-[16px] leading-[27px] text-justify text-[#000000] mt-4">
+            If you're stuck with organic growth for your SaaS products, then you
+            can book a discovery call with me, which is absolutely free of cost.
+          </p>
+        </div>
+        <div class="md:w-1/3 flex-col items-center md:flex hidden">
+          <img
+            src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002763_resultC-Users-LENOVO-Downloads-.webp"
+            alt="SaaS Marketing Growth" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits For Hiring -->
+
+    <section class="bg-[#FFF0F0] py-12 px-3 md:px-6">
+      <div class="max-w-6xl mx-auto text-center mb-10">
+        <h2
+          class="font-inter font-bold md:text-[36px] md:leading-[54px] text-[22px] leading-[33px] text-black"
+          id="Our__success">
+          Book my slots for the below SEO Packages
+        </h2>
+      </div>
+
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
+        <div id="image-container" class="md:w-1/3 hidden lg:block">
+          <img
+            id="dynamic-image"
+            src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697_resultC-Users-LENOVO-Downloads-.webp"
+            alt="SEO Service"
+            class="w-full rounded-lg" />
+        </div>
+
+        <div class="lg:w-2/3 w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+            class="p-4 custom-border rounded-[20px] bg-[#ffffff]"
+            onmouseover="changeImage('seo-audit', this)"
+            onmouseout="resetBorder(this)">
+            <h3
+              class="font-inter font-bold text-[20px] leading-[34px] gradient-text">
+              SEO Website Audit
+            </h3>
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697_resultC-Users-LENOVO-Downloads-.webp"
+              alt="SEO Website Audit"
+              class="block lg:hidden mt-2" />
+            <p
+              class="font-inter font-normal md:text-[18px] text-[16px] leading-[27px] text-[#000000] mt-2">
+              A deep dive into your website’s SEO performance, identifying areas
+              to improve, errors to fix, and what’s working well.
+            </p>
+          </div>
+
+          <div
+            class="p-4 custom-border rounded-[20px] bg-[#ffffff]"
+            onmouseover="changeImage('seo-consultation', this)"
+            onmouseout="resetBorder(this)">
+            <h3
+              class="font-inter font-bold text-[20px] leading-[34px] gradient-text">
+              SEO Consultation
+            </h3>
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-1_resultC-Users-LENOVO-Downloads-.webp"
+              alt="SEO Consultation"
+              class="block lg:hidden mt-2" />
+            <p
+              class="font-inter font-normal md:text-[18px] text-[16px] leading-[27px] text-[#000000] mt-2">
+              Expert guidance to improve your website’s visibility and boost
+              organic traffic through keyword research and technical SEO.
+            </p>
+          </div>
+
+          <div
+            class="p-4 custom-border rounded-[20px] bg-[#ffffff]"
+            onmouseover="changeImage('seo-project', this)"
+            onmouseout="resetBorder(this)">
+            <h3
+              class="font-inter font-bold text-[20px] leading-[34px] gradient-text">
+              SEO Project Management
+            </h3>
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-2_resultC-Users-LENOVO-Downloads-.webp"
+              alt="SEO Project Management"
+              class="block lg:hidden mt-2" />
+            <p
+              class="font-inter font-normal md:text-[18px] text-[16px] leading-[27px] text-[#000000] mt-2">
+              Expert guidance for planning and organizing your SEO campaign,
+              ensuring it stays on track to achieve your business objectives.
+            </p>
+          </div>
+
+          <div
+            class="p-4 custom-border rounded-[20px] bg-[#ffffff]"
+            onmouseover="changeImage('seo-training', this)"
+            onmouseout="resetBorder(this)">
+            <h3
+              class="font-inter font-bold text-[20px] leading-[34px] gradient-text">
+              SEO Training
+            </h3>
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-3_resultC-Users-LENOVO-Downloads-.webp"
+              alt="SEO Training"
+              class="block lg:hidden mt-2" />
+            <p
+              class="font-inter font-normal md:text-[18px] text-[16px] leading-[27px] text-[#000000] mt-2">
+              Learn SEO principles and best practices through online courses to
+              improve your website’s search rankings and visibility.
+            </p>
+          </div>
+
+          <div
+            class="p-4 custom-border rounded-[20px] bg-[#ffffff]"
+            onmouseover="changeImage('seo-team', this)"
+            onmouseout="resetBorder(this)">
+            <h3
+              class="font-inter font-bold text-[20px] leading-[34px] gradient-text">
+              In-house SEO Team setup
+            </h3>
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-4_resultC-Users-LENOVO-Downloads-.webp"
+              alt="In-house SEO Team setup"
+              class="block lg:hidden mt-2" />
+            <p
+              class="font-inter font-normal md:text-[18px] text-[16px] leading-[27px] text-[#000000] mt-2">
+              Greater control over your SEO efforts, with a team dedicated to
+              your company’s unique needs and long-term success.
+            </p>
+          </div>
+
+          <div
+            class="p-4 custom-border rounded-[20px] bg-[#ffffff]"
+            onmouseover="changeImage('seo-funnel', this)"
+            onmouseout="resetBorder(this)">
+            <h3
+              class="font-inter font-bold text-[20px] leading-[34px] gradient-text">
+              SEO Funnel Setup
+            </h3>
+            <img
+              src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-5_resultC-Users-LENOVO-Downloads-.webp"
+              alt="SEO Funnel Setup"
+              class="block lg:hidden mt-2" />
+            <p
+              class="font-inter font-normal md:text-[18px] text-[16px] leading-[27px] text-[#000000] mt-2">
+              Creating a structured process to attract potential customers
+              through organic search, guiding them through different journey
+              stages, and converting them into valuable leads or customers.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-10">
+        <a
+          href="https://the7eagles.com/seo-contact-us/"
+          target="_blank"
+          id="seoexindiaform"
+          class="bg-white customPopupTrigger py-3 px-6 rounded-full shadow-md border border-gray-300 inline-block">
+          <span class="font-bold gradient-text"> Book a Consultation </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Why Hire SEO Expert In India -->
+
+    <section class="bg-white py-12 md:px-6 px-3">
+      <div class="mx-auto">
+        <h2
+          class="font-inter font-bold md:text-[36px] md:leading-[54px] text-[22px] leading-[33px] text-black text-center mb-4"
+          id="Our__success">
+          Why hire an SEO expert in India
+        </h2>
+        <p
+          class="font-inter text-center font-semibold md:text-[18px] text-[14px] leading-[22px] text-[#29629F] mb-10">
+          Hiring an SEO expert in India has several advantages
+        </p>
+
+        <div class="relative">
+          <!-- Vertical line -->
+          <div
+            class="absolute lg:left-1/2 left-0 h-[90%] border border-dashed border-[#9A9A9A] w-0.5 md:-translate-x-1/2 bg-gray-200"></div>
+
+          <!-- Timeline items -->
+          <div class="space-y-12">
+            <!-- Item 1 -->
+            <div class="timeline-item relative">
+              <div class="timeline-dot"></div>
+              <div class="flex md:flex-row flex-col">
+                <div class="lg:w-[calc(50%-6px)] w-full lg:pl-8 pl-6 lg:pr-8">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="custom-gradient min-h-[120px] p-4 rounded-lg shadow-lg flex-grow md:flex block gap-2">
+                      <div
+                        class="md:w-20 w-10 p-2 md:p-0 text-center flex-shrink-0 md:flex items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] lg:hidden">
+                        <img
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Mask-group-7.png" />
+                      </div>
+                      <p
+                        class="font-inter flex items-center font-normal md:text-[16px] md:leading-[27px] text-[14px] leading-[22px] text-[#ffffff] mt-2 md:mt-0">
+                        In India, you'll find a big talent pool of skilled SEO
+                        experts who stay updated with industry trends. They are
+                        certified and experienced in handling various SEO
+                        projects.
+                      </p>
+                      <div
+                        class="md:w-20 p-2 md:p-0 w-10 text-center flex-shrink-0 items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] hidden lg:flex">
+                        <img
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Mask-group-7.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item relative">
+              <div class="timeline-dot"></div>
+              <div class="flex md:flex-row flex-col">
+                <div
+                  class="lg:w-[calc(50%-6px)] w-full lg:pl-8 pl-6 lg:ml-[50%]">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="custom-gradient min-h-[120px] p-4 rounded-lg shadow-lg flex-grow md:flex block gap-2">
+                      <div
+                        class="md:w-20 p-2 md:p-0 w-10 text-center flex-shrink-0 md:flex items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px]">
+                        <img
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002764.png" />
+                      </div>
+                      <p
+                        class="font-inter flex items-center font-normal md:text-[16px] md:leading-[27px] text-[14px] leading-[22px] text-[#ffffff] mt-2 md:mt-0">
+                        The time zone difference in India can be advantageous,
+                        ensuring continuous project progress around the clock.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item relative">
+              <div class="timeline-dot"></div>
+              <div class="flex md:flex-row flex-col">
+                <div class="lg:w-[calc(50%-6px)] w-full lg:pl-8 pl-6 lg:pr-8">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="custom-gradient min-h-[120px] p-4 rounded-lg shadow-lg flex-grow md:flex block gap-2">
+                      <div
+                        class="md:w-20 w-10 p-2 md:p-0 text-center flex-shrink-0 md:flex items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] lg:hidden">
+                        <img
+                        alt="image-6"
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002766.png" />
+                      </div>
+                      <p
+                        class="font-inter flex items-center font-normal md:text-[16px] md:leading-[27px] text-[14px] leading-[22px] text-[#ffffff] mt-2 md:mt-0">
+                        Indian SEO experts aim for real outcomes like more
+                        website visitors, better search rankings, and increased
+                        online visibility.
+                      </p>
+                      <div
+                        class="md:w-20 w-10 p-2 md:p-0 text-center flex-shrink-0 items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] hidden lg:flex">
+                        <img
+                        alt="image-5"
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002766.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item relative">
+              <div class="timeline-dot"></div>
+              <div class="flex md:flex-row flex-col">
+                <div
+                  class="lg:w-[calc(50%-6px)] w-full lg:pl-8 pl-6 lg:ml-[50%]">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="custom-gradient min-h-[120px] p-4 rounded-lg shadow-lg flex-grow md:flex block gap-2">
+                      <div
+                        class="md:w-20 w-10 p-2 md:p-0 text-center flex-shrink-0 md:flex items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px]">
+                        <img
+                        alt="image-4"
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002767.png" />
+                      </div>
+                      <p
+                        class="font-inter flex items-center font-normal md:text-[16px] md:leading-[27px] text-[14px] leading-[22px] text-[#ffffff] mt-2 md:mt-0">
+                        Tailored strategies to cater to specific target markets
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="timeline-item relative">
+              <div class="timeline-dot"></div>
+              <div class="flex md:flex-row flex-col">
+                <div class="lg:w-[calc(50%-6px)] w-full lg:pl-8 pl-6 lg:pr-8">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="custom-gradient min-h-[120px] p-4 rounded-lg shadow-lg flex-grow md:flex block gap-2">
+                      <div
+                        class="md:w-20 w-10 p-2 md:p-0 text-center flex-shrink-0 flex items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] lg:hidden">
+                        <img
+                        alt="image-3"
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002768_resultC-Users-LENOVO-Downloads-.webp" />
+                      </div>
+                      <p
+                        class="font-inter flex items-center font-normal md:text-[16px] md:leading-[27px] text-[14px] leading-[22px] text-[#ffffff] mt-2 md:mt-0">
+                        Insights to drive result-oriented strategies using Data
+                        Analytics, leading to effective and measurable results
+                      </p>
+                      <div
+                        class="md:w-20 p-2 md:p-0 w-10 text-center flex-shrink-0 flex items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] hidden lg:flex">
+                        <img
+                        alt="image-2"
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002768_resultC-Users-LENOVO-Downloads-.webp" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="timeline-item relative">
+              <div class="timeline-dot"></div>
+              <div class="flex md:flex-row flex-col">
+                <div
+                  class="lg:w-[calc(50%-6px)] w-full lg:pl-8 pl-6 lg:ml-[50%]">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="custom-gradient min-h-[120px] p-4 rounded-lg shadow-lg flex-grow md:flex block gap-2">
+                      <div
+                        class="md:w-20 p-2 md:p-0 w-10 text-center flex-shrink-0 flex items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px]">
+                        <img
+                        alt="image-1"
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002769_resultC-Users-LENOVO-Downloads-.webp" />
+                      </div>
+                      <p
+                        class="font-inter flex items-center font-normal md:text-[16px] md:leading-[27px] text-[14px] leading-[22px] text-[#ffffff] mt-2 md:mt-0">
+                        Ethical SEO practices (white hat SEO) and adhere to
+                        search engine guidelines
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="timeline-item relative">
+              <div class="timeline-dot"></div>
+              <div class="flex md:flex-row flex-col">
+                <div class="lg:w-[calc(50%-6px)] w-full lg:pl-8 pl-6 lg:pr-8">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="custom-gradient min-h-[120px] p-4 rounded-lg shadow-lg flex-grow md:flex block gap-2">
+                      <div
+                        class="md:w-20 w-10 p-2 md:p-0 text-center flex-shrink-0 flex items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] lg:hidden">
+                        <img
+                        alt="icon-1"
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Mask-group-8_resultC-Users-LENOVO-Downloads-1-1.webp" />
+                      </div>
+                      <p
+                        class="font-inter font-normal flex items-center md:text-[16px] md:leading-[27px] text-[14px] leading-[22px] text-[#ffffff] mt-2 md:mt-0">
+                        Uncompromised quality SEO techniques with Cost-effective
+                        services
+                      </p>
+                      <div
+                        class="md:w-20 p-2 md:p-0 w-10 text-center flex-shrink-0 flex items-center justify-center bg-white rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] hidden lg:flex">
+                        <img
+                        alt="icon"
+                          class="max-w-[60%]"
+                          src="https://the7eagles.com/wp-content/uploads/2025/02/Mask-group-8_resultC-Users-LENOVO-Downloads-1-1.webp" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative py-8 md:px-6 px-3 text-white bg-cover bg-center bg-no-repeat flex flex-col items-center text-center"
+      style="
+        background-image: url('https://the7eagles.com/wp-content/uploads/2025/02/image-1_resultC-Users-LENOVO-Downloads-1-1-scaled.webp');
+      ">
+      <div class="max-w-4xl">
+        <p
+          class="font-inter font-bold text-[18px] text-center md:text-[34px] leading-[27px] md:leading-[51px] text-white">
+          Your MQLs, PQLs, and SQLs are being captured by your competition—until
+          I step in!
+        </p>
+      </div>
+      <div class="mt-6">
+        <a
+          href="https://the7eagles.com/seo-contact-us/"
+          target="_blank"
+          id="seoexindiaform"
+          class="bg-white py-3 px-6 rounded-full shadow-md border border-gray-300 inline-block">
+          <span class="font-bold gradient-text"> Book a Consultation </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="bg-white py-12 md:px-6 px-3">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="font-inter font-bold md:text-[36px] md:leading-[54px] text-[22px] leading-[33px] text-black"
+          id="Our__success">
+          How to choose an SEO expert?
+        </h2>
+      </div>
+
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:gap-8 gap-0 mt-6">
+        <div class="md:w-1/3 flex flex-col items-center">
+          <img
+            src="https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002761_resultC-Users-LENOVO-Downloads-1-1.webp"
+            alt="SaaS Marketing Growth" />
+        </div>
+        <div class="md:w-2/3 text-gray-800 text-lg">
+          <p
+            class="font-inter font-semibold text-[16px] leading-[27px] text-black text-justify md:text-[18px] md:leading-[30.6px] text-[#000000] mt-4">
+            Look for an SEO expert with a proven track record. Most importantly
+            should be CXO’s position in any of the
+            <span
+              class="font-inter font-semibold text-justify md:text-[18px] text-[16px] leading-[27px] text-[#29629F]"
+              ><a href="https://the7eagles.com/india/seo-company/"
+                >India's best SEO company.</a
+              ></span
+            >
+          </p>
+          <p
+            class="mt-4 font-inter font-semibold text-[16px] leading-[27px] text-black text-justify md:text-[18px] md:leading-[30.6px] text-[#000000] mt-4">
+            A reputable SEO expert will be transparent about their strategies,
+            processes, and the results they can realistically achieve for your
+            website.
+          </p>
+          <p
+            class="mt-4 font-inter font-semibold text-[16px] leading-[27px] text-black text-justify md:text-[18px] md:leading-[30.6px] text-[#000000] mt-4">
+            SEO is an ever-changing field, so look for an expert who stays
+            updated with the latest trends and algorithm changes.
+          </p>
+          <p
+            class="mt-4 font-inter font-semibold text-[16px] leading-[27px] text-black text-justify md:text-[18px] md:leading-[30.6px] text-[#000000] mt-4">
+            Consider the cost of the SEO services and balance it with the
+            expert’s value and expertise.
+          </p>
+          <p
+            class="mt-4 font-inter font-semibold text-[16px] leading-[27px] text-black text-justify md:text-[18px] md:leading-[30.6px] text-[#000000] mt-4">
+            Check online reviews and testimonials from previous clients to get
+            insights into the SEO expert’s reputation and the quality of their
+            work.
+          </p>
+          <p
+            class="mt-4 font-inter font-semibold text-[16px] leading-[27px] text-black text-justify md:text-[18px] md:leading-[30.6px] text-[#000000] mt-4">
+            A true SEO expert should focus on branding, social media presence,
+            increased user experience, EEAT, consistent content publishing, and
+            topical authority,.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-12 md:px-6 px-3">
+      <h2
+        class="font-inter font-bold md:text-[36px] md:leading-[54px] text-[22px] leading-[33px] text-black text-center mb-6"
+        id="Our__success">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        <!-- FAQ Items -->
+        <div class="bg-white p-4 border border-[#E4E9F6] rounded-[20px]">
+          <button
+            class="w-full text-left font-inter font-semibold md:text-[20px] md:leading-[30px] text-[18px] leading-[27px] text-black flex justify-between items-center faqseohead"
+            onclick="toggleFAQ('faq1')">
+            What is the role of an SEO expert in boosting my business online?
+            <span class="md:pl-0 pl-2">&#x25BC;</span>
+          </button>
+          <p
+            id="faq1"
+            class="faq-answer hidden mt-2 font-inter font-normal md:text-[18px] md:leading-[31px] text-[16px] leading-[24px] text-black">
+            An SEO expert plays a crucial role in optimizing your website to
+            improve its visibility on search engines. This, in turn, attracts
+            more potential customers to your business.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 border border-[#E4E9F6] rounded-[20px]">
+          <button
+            class="w-full faqseohead text-left font-inter font-semibold md:text-[20px] md:leading-[30px] text-[18px] leading-[27px] text-black flex justify-between items-center"
+            onclick="toggleFAQ('faq2')">
+            How can hiring an SEO expert benefit my business in the Indian
+            market?
+            <span class="md:pl-0 pl-2">&#x25BC;</span>
+          </button>
+          <p
+            id="faq2"
+            class="faq-answer hidden mt-2 font-inter font-normal md:text-[18px] md:leading-[31px] text-[16px] leading-[24px] text-black">
+            Hiring an SEO expert in India helps tailor strategies that are
+            specific to the local market, ensuring your business reaches the
+            right audience and stays ahead of the competition.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 border border-[#E4E9F6] rounded-[20px]">
+          <button
+            class="w-full faqseohead text-left font-inter font-semibold md:text-[20px] md:leading-[30px] text-[18px] leading-[27px] text-black flex justify-between items-center"
+            onclick="toggleFAQ('faq3')">
+            What makes an SEO expert in India different from others?
+            <span class="md:pl-0 pl-2">&#x25BC;</span>
+          </button>
+          <p
+            id="faq3"
+            class="faq-answer hidden mt-2 font-inter font-normal md:text-[18px] md:leading-[31px] text-[16px] leading-[24px] text-black">
+            An SEO expert in India understands the specifics of the area market,
+            cultural preferences, and search behavior, allowing them to create
+            targeted and effective SEO strategies for Indian businesses.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 border border-[#E4E9F6] rounded-[20px]">
+          <button
+            class="w-full faqseohead text-left font-inter font-semibold md:text-[20px] md:leading-[30px] text-[18px] leading-[27px] text-black flex justify-between items-center"
+            onclick="toggleFAQ('faq4')">
+            Can SEO help my business connect with a global audience from India?
+            <span class="md:pl-0 pl-2">&#x25BC;</span>
+          </button>
+          <p
+            id="faq4"
+            class="faq-answer hidden mt-2 font-inter font-normal md:text-[18px] md:leading-[31px] text-[16px] leading-[24px] text-black">
+            Absolutely. An experienced SEO expert can help you improve your
+            online visibility around the world. And Allowing your business in
+            India to reach a wider international audience.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 border border-[#E4E9F6] rounded-[20px]">
+          <button
+            class="w-full faqseohead text-left font-inter font-semibold md:text-[20px] md:leading-[30px] text-[18px] leading-[27px] text-black flex justify-between items-center"
+            onclick="toggleFAQ('faq5')">
+            What are the advantages of hiring an SEO expert for your business?
+            <span class="md:pl-0 pl-2">&#x25BC;</span>
+          </button>
+          <p
+            id="faq5"
+            class="faq-answer hidden mt-2 font-inter font-normal md:text-[18px] md:leading-[31px] text-[16px] leading-[24px] text-black">
+            SEO experts boost your website’s visibility, attracting more
+            relevant traffic, leads, and sales. They handle complex
+            optimizations, saving you time and effort, all while maximizing your
+            return on investment. Think top rankings, increased brand awareness,
+            and a thriving online presence.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 border border-[#E4E9F6] rounded-[20px]">
+          <button
+            class="w-full faqseohead text-left font-inter font-semibold md:text-[20px] md:leading-[30px] text-[18px] leading-[27px] text-black flex justify-between items-center"
+            onclick="toggleFAQ('faq6')">
+            How to find a reliable SEO expert in India?
+            <span class="md:pl-0 pl-2">&#x25BC;</span>
+          </button>
+          <p
+            id="faq6"
+            class="faq-answer hidden mt-2 font-inter font-normal md:text-[18px] md:leading-[31px] text-[16px] leading-[24px] text-black">
+            Finding a reliable SEO expert in India involves research and
+            verification. Check agency experience, case studies, client reviews,
+            and industry certifications. Prioritize transparency, clear
+            communication, and alignment with your budget and goals. Don’t
+            hesitate to contact shortlisted experts for consultations before
+            making your decision.
+          </p>
+        </div>
+
+        <div class="bg-white border border-[#E4E9F6] p-4 rounded-[20px]">
+          <button
+            class="w-full faqseohead text-left font-inter font-semibold md:text-[20px] md:leading-[30px] text-[18px] leading-[27px] text-black flex justify-between items-center"
+            onclick="toggleFAQ('faq7')">
+            Who is the best SEO expert in India?
+            <span class="md:pl-0 pl-2">&#x25BC;</span>
+          </button>
+          <p
+            id="faq7"
+            class="faq-answer hidden mt-2 font-inter font-normal md:text-[18px] md:leading-[31px] text-[16px] leading-[24px] text-black">
+            Ashkar Gomez, founder of 7 Eagles, is a leading SEO expert with 8+
+            years experience across 20+ industries. While the “best” depends on
+            individual needs, his proven track record and diverse expertise make
+            him a top choice for SEO success in India.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script>
+  function changeImage(service, element) {
+    const imageMap = {
+      "seo-audit":
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697_resultC-Users-LENOVO-Downloads-.webp",
+      "seo-consultation":
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-1_resultC-Users-LENOVO-Downloads-.webp",
+      "seo-project":
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-2_resultC-Users-LENOVO-Downloads-.webp",
+      "seo-training":
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-3_resultC-Users-LENOVO-Downloads-.webp",
+      "seo-team":
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-4_resultC-Users-LENOVO-Downloads-.webp",
+      "seo-funnel":
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002697-5_resultC-Users-LENOVO-Downloads-.webp",
+    };
+    document.getElementById("dynamic-image").src = imageMap[service];
+
+    document.querySelectorAll(".custom-border").forEach((box) => {
+      box.classList.remove("active");
+    });
+
+    element.classList.add("active");
+  }
+
+  function resetBorder(element) {
+    element.classList.remove("active");
+  }
+
+  function toggleFAQ(id) {
+    document.querySelectorAll(".faq-answer").forEach((item) => {
+      if (item.id !== id) {
+        item.classList.add("hidden");
+      }
+    });
+    document.getElementById(id).classList.toggle("hidden");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var firstSlider2 = document.querySelector(".firstSlider2");
+    var firstSlideTrack = document.querySelector(".firstSlide-track2");
+    var isPaused = false; // Tracks the pause state
+
+    // Function to toggle pause state
+    function togglePause() {
+      isPaused = !isPaused;
+      firstSlideTrack.style.animationPlayState = isPaused
+        ? "paused"
+        : "running";
+    }
+
+    // Stop animation on hover
+    firstSlider2.addEventListener("mouseenter", function () {
+      firstSlideTrack.style.animationPlayState = "paused";
+    });
+
+    // Resume animation when not hovering
+    firstSlider2.addEventListener("mouseleave", function () {
+      if (!isPaused) {
+        firstSlideTrack.style.animationPlayState = "running";
+      }
+    });
+
+    // Toggle pause on click
+    firstSlider2.addEventListener("click", togglePause);
+  });
+
+  //Why Hire an seo expert in India
+  const timelineItems = document.querySelectorAll(".timeline-item");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  timelineItems.forEach((item) => {
+    item.style.opacity = 0;
+    item.style.transform = "translateY(20px)";
+    item.style.transition = "all 0.5s ease-out";
+    observer.observe(item);
+  });
+
+  //   Hiring the Best SEO
+
+  const menuItems = [
+    {
+      title: "Constructive SEO strategies",
+      content:
+        "The Best SEO Analyst can plan an effective, long-run constructive SEO strategy to meet the specific needs to increase organic traffic and ranking. This is achieved as the expert stays updated with the latest trends, algorithms, and proven advanced practices.",
+      image:
+        "https://the7eagles.com/wp-content/uploads/2025/02/Frame-1618872765-1_resultC-Users-LENOVO-Downloads-.webp",
+      logo: "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002598_resultC-Users-LENOVO-Downloads-.webp",
+    },
+    {
+      title: "Get a Higher position in Search Engine Rankings",
+      content:
+        "Obtaining a high position in search results increases the website’s visibility, which can attract more potential customers to the business. A niche SEO expert can secure this organically by optimizing the website’s content, structure, and other technical aspects.",
+      image:
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002623-1_resultC-Users-LENOVO-Downloads-.webp",
+      logo: "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002598-6_resultC-Users-LENOVO-Downloads-.webp",
+    },
+    {
+      title: "Improve the quality of your traffic and gain more leads",
+      content:
+        "An SEO expert is focused on bringing more organic quality traffic to the website who can certainly turn out to be a potential customer. This approach is aimed at linking up more conversion rates.",
+      image:
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002624_result.webp",
+      logo: "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002598-5_resultC-Users-LENOVO-Downloads-.webp",
+    },
+    {
+      title: "Enhanced User Experience",
+      content:
+        "A niche-specific SEO Analyst will ensure the customer has a world-class experience exploring the website. The SEO optimization guarantees optimal site speed, excellent mobile responsiveness, and exceptional navigation quality.",
+      image:
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002625-1_resultC-Users-LENOVO-Downloads-.webp",
+      logo: "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002598-4_resultC-Users-LENOVO-Downloads-.webp",
+    },
+    {
+      title: "Competitive Advantage",
+      content:
+        "Hiring an expert SEO analyst can help you rank higher in the search engines than your competitors. This can give you an effective competitive edge in your business.",
+      image:
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002626_result.webp",
+      logo: "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002598-3_resultC-Users-LENOVO-Downloads-.webp",
+    },
+    {
+      title: "Not impacted by Google Updates",
+      content:
+        "The best SEO analysts stay updated with the emerging changes in the search engine algorithm and adapt the strategies to ensure that the website remains compliant and maintains visibility.",
+      image:
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002627_result.webp",
+      logo: "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002598-2_resultC-Users-LENOVO-Downloads-.webp",
+    },
+    {
+      title: "Cost effectiveness",
+      content:
+        "Hiring an expert SEO analyst may require an initial investment, and their expertise can save you money in the long run. Effective SEO means less reliance on paid advertising to drive traffic, leading to more sustainable and cost-effective marketing efforts.",
+      image:
+        "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002628_result.webp",
+      logo: "https://the7eagles.com/wp-content/uploads/2025/02/Group-1000002598-1_resultC-Users-LENOVO-Downloads-.webp",
+    },
+  ];
+
+  function updateContent(index) {
+    const contentSection = document.getElementById("content-section");
+    const title = document.getElementById("content-title");
+    const text = document.getElementById("content-text");
+    const image = document.getElementById("content-image");
+    const logo = document.getElementById("content-logo"); // Get the logo element
+
+    // Update content dynamically
+    title.textContent = menuItems[index].title;
+    text.textContent = menuItems[index].content;
+    image.src = menuItems[index].image;
+    logo.src = menuItems[index].logo; // Update the logo source
+
+    // Remove active class from all menu items
+    document
+      .querySelectorAll("li")
+      .forEach((item) => item.classList.remove("active"));
+
+    // Add active class to the clicked menu item
+    document
+      .getElementById(`arrow-${index}`)
+      .parentElement.classList.add("active");
+  }
+
+  // Set the first menu item as active when the page loads
+  document.addEventListener("DOMContentLoaded", () => {
+    updateContent(0);
+  });
+
+  //   Case Study
+
+  // Testimonial
+
+  //   Mobile View
+
+  const accordion = document.getElementById("accordion");
+
+  menuItems.forEach((item, index) => {
+    const isOpen = index === 0;
+    const dropdownHtml = `
+                <div class="bg-[#f9f9f9] rounded-lg shadow-sm overflow-hidden">
+                    <button 
+                        class="w-full px-6 py-4 flex items-center justify-between transition-colors faqseohead duration-150 ease-in-out ${
+                          isOpen ? "bg-[#FFE5E5]" : "bg-[#f9f9f9]"
+                        }"
+                        onclick="toggleDropdown(${index})"
+                    >
+                        <div class="flex items-center gap-3">
+                            <div class="logo-container ${
+                              isOpen ? "rounded-full p-1" : ""
+                            }">
+                                <img src="${
+                                  item.logo
+                                }" alt="" class="max-w-[50px] max-h-[50px]" />
+                            </div>
+                            <span class="font-inter font-bold text-left text-[16px] title-text leading-[24px] ${
+                              isOpen
+                                ? "gradient-text font-bold text-[16px] leading-[24px]"
+                                : "text-[#898989]"
+                            }">${item.title}</span>
+                        </div>
+                        <svg class="transform transition-transform duration-200 h-5 w-5 ${
+                          isOpen ? "text-[#CD1E28] rotate-180" : "text-gray-500"
+                        }" id="arrow-${index}"
+                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="dropdown-content overflow-hidden transition-all duration-300 ease-in-out bg-[#FFE5E5]" id="content-${index}" style="max-height: ${
+      isOpen ? "1000px" : "0"
+    };">
+                        <div class="px-6 pb-6">
+                            <p class="font-inter font-medium text-[16px] leading-[24px] text-black leading-relaxed">${
+                              item.content
+                            }</p>
+                            <div class="rounded-lg overflow-hidden mb-4 mt-4">
+                                <img src="${item.image}" alt="${
+      item.title
+    }" class="w-full h-64 object-contain rounded-lg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+    accordion.insertAdjacentHTML("beforeend", dropdownHtml);
+  });
+
+  function toggleDropdown(index) {
+    document.querySelectorAll(".dropdown-content").forEach((dropdown, i) => {
+      const arrow = document.getElementById(`arrow-${i}`);
+      const button = dropdown.previousElementSibling;
+      const parentDiv = button?.parentElement; // Select the parent div
+      const title = button?.querySelector(".title-text"); // Get the title span
+
+      if (!dropdown || !arrow || !button || !parentDiv || !title) return; // Prevent errors
+
+      const isActive = i === index && dropdown.style.maxHeight !== "0px";
+
+      if (i === index) {
+        dropdown.style.maxHeight = isActive
+          ? "0"
+          : dropdown.scrollHeight + "px";
+        arrow.style.transform = isActive ? "rotate(0deg)" : "rotate(180deg)";
+
+        // ✅ Update background color for active state
+        parentDiv.style.backgroundColor = isActive ? "#f9f9f9" : "#FFE2E2";
+        button.style.backgroundColor = isActive ? "#f9f9f9" : "#FFE2E2";
+
+        // ✅ Apply gradient text to active title
+        title.classList.toggle("gradient-text", !isActive);
+        title.classList.toggle("text-[#898989]", isActive); // Reset when inactive
+      } else {
+        dropdown.style.maxHeight = "0";
+        arrow.style.transform = "rotate(0deg)";
+
+        // ✅ Reset to default background color
+        parentDiv.style.backgroundColor = "#f9f9f9";
+        button.style.backgroundColor = "#f9f9f9";
+
+        // ✅ Remove gradient text when inactive
+        title.classList.remove("gradient-text");
+        title.classList.add("text-[#898989]");
+      }
+    });
+  }
+</script>
+
+<?php get_footer(); ?>
