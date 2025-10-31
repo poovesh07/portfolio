@@ -25,7 +25,7 @@ const RecentProjects = () => {
           "Created an interactive user registration form using React and controlled components. Includes real-time validation, form submission handling, and clean responsive UI.",
         ],
         liveLink: "https://user-form-three-nu.vercel.app/",
-        codeLink: "https://github.com/muniyasamy124/userform_react",
+        codeLink: "https://github.com/poovesh07/User-Form",
       },
       {
         title: "Weather App",

@@ -116,21 +116,22 @@ const Hero = () => {
                         className="w-64 h-64 rounded-2xl object-cover mt-8 block md:hidden"
                     />
                     <p className="font-sora font-light text-[16px] leading-[30px] text-[#DDDDDD] pt-6">
-I’m a passionate Front-End Developer with strong skills in HTML, CSS, JavaScript, React.js, Tailwind CSS, and GitHub.
-I enjoy building responsive, user-friendly, and visually appealing web applications.
-My projects include a Food Order App, Weather App, To-Do List, and a Redux Customer Dashboard.
-I’m eager to grow, learn, and contribute to impactful front-end development projects
+                        I’m a passionate Front-End Developer with strong skills in HTML, CSS, JavaScript, React.js, Tailwind CSS, and GitHub.
+                        I enjoy building responsive, user-friendly, and visually appealing web applications.
+                        My projects include a Food Order App, Weather App, To-Do List, and a Redux Customer Dashboard.
+                        I’m eager to grow, learn, and contribute to impactful front-end development projects
                     </p>
 
                     {/* Button and Social */}
                     <div className="flex items-center gap-4 mt-8 flex-wrap">
                         <a
-                            href="/Muniyasamy_Resume.pdf"
-                            download
+                            href="/Poovesh_resume.pdf"
+                            download="Poovesh_Resume.pdf"
                             className="bg-[#8750F7] hover:bg-white hover:text-[#8750F7] hover:border-2 hover:border-[#8750F7] text-white px-6 py-[20px] rounded-full font-sora font-semibold text-[15px] leading-[15px] shadow-lg transition-all flex items-center gap-2"
                         >
                             Download Resume <FiDownload className="text-[18px]" />
                         </a>
+
                         <div className="flex flex-wrap gap-4 text-[#a47bff]">
                             {[
                                 { icon: <FaGithub />, link: "https://github.com/poovesh07" },
