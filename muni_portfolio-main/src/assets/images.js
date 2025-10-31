@@ -6,6 +6,7 @@ import redux from "./redux.webp";
 import weather from "./weather.webp";
 import pooveshContact from "./poovesh-contact.webp";
 import poovesh from "./poovesh.webp"
+import expence from "./expence.webp"
 import topRight from "./top-right.webp";
 
 export {
@@ -16,5 +17,6 @@ export {
   weather,
   pooveshContact,
   poovesh,
+  expence,
   topRight,
 };

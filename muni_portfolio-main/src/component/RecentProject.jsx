@@ -1,7 +1,7 @@
 import React from "react";
 import { FiExternalLink, FiEye } from "react-icons/fi";
 import { SiReact } from "react-icons/si";
-import { foodorder, userform, todolist, redux, weather } from "../assets/images";
+import { foodorder, userform, todolist, redux, weather, expence } from "../assets/images";
 
 
 const RecentProjects = () => {
@@ -57,6 +57,18 @@ const RecentProjects = () => {
         liveLink: "https://redux-puce-seven.vercel.app/",
         codeLink: "https://github.com/poovesh07/redux",
       },
+      {
+        title: "Expense Tracker",
+         image: expence,
+        tags: ["React", "Tailwind CSS"],
+        description: [
+          "Simple expense tracker built with React and Tailwind CSS.Supports add, edit, and delete with data saved in LocalStorage",
+          
+        ],
+        liveLink: "https://expense-tracker-three-phi-59.vercel.app/",
+        codeLink: "https://github.com/poovesh07/Expense-Tracker",
+      },
+
     ],
   };
 
