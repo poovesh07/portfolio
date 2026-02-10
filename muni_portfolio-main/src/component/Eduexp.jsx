@@ -51,13 +51,13 @@ export default function TimelineSection() {
     {
       title: "BACHELOR OF COMPUTER APPLICATIONS",
       role: "Kamaraj College, Tuticorin",
-      percentage: "7.5 CGPA",
+      percentage: "7.7 CGPA",
       date: "2022 - 2025",
     },
     {
       title: "HIGHER SECONDARY CERTIFICATE",
       role: "St. Lasalle Higher Secondary School, Tuticorin",
-      percentage: "76%",
+      percentage: "70%",
       date: "2020 - 2022",
     },
   ];
