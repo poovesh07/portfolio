@@ -18,7 +18,7 @@ const skills = [
     { icon: <SiHtml5 size={50} color="#e34c26" />, label: "HTML", percent: "85%" },
     { icon: <SiCss3 size={50} color="#264de4" />, label: "CSS", percent: "85%" },
     { icon: <SiJavascript size={50} color="#F7DF1E" />, label: "JavaScript", percent: "80%" },
-    { icon: <SiReact size={50} color="#61DAFB" />, label: "React", percent: "75%" },
+    { icon: <SiReact size={50} color="#61DAFB" />, label: "React", percent: "80%" },
     { icon: <SiGithub size={50} color="#ffffff" />, label: "GitHub", percent: "80%" },
     
 {
