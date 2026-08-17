@@ -11,7 +11,7 @@ import {
     FaUserGraduate,
 } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
-import poovesh  from"../assets/poovesh80.png";
+import poovesh from "../assets/poovesh01.png";
 import topcor from "../assets/top-right.webp";
 import "../App.css";
 
@@ -116,10 +116,10 @@ const Hero = () => {
                         className="w-64 h-64 rounded-2xl object-cover mt-8 block md:hidden"
                     />
                     <p className="font-sora font-light text-[16px] leading-[30px] text-[#DDDDDD] pt-6">
-I’m a passionate Front-End Developer with strong skills in HTML, CSS, JavaScript, React.js, Tailwind CSS, and GitHub.
-I enjoy building responsive, user-friendly, and visually appealing web applications.
-My projects include a Food Order App, Weather App, To-Do List, and a Redux Customer Dashboard.
-I’m eager to grow, learn, and contribute to impactful front-end development projects
+                        I’m a passionate Front-End Developer with strong skills in HTML, CSS, JavaScript, React.js, Tailwind CSS, and GitHub.
+                        I enjoy building responsive, user-friendly, and visually appealing web applications.
+                        My projects include a Food Order App, Weather App, To-Do List, and a Redux Customer Dashboard.
+                        I’m eager to grow, learn, and contribute to impactful front-end development projects
                     </p>
 
                     {/* Button and Social */}
@@ -131,24 +131,22 @@ I’m eager to grow, learn, and contribute to impactful front-end development pr
                         >
                             Download Resume <FiDownload className="text-[18px]" />
                         </a>
-                        <div className="flex flex-wrap gap-4 text-[#a47bff]">
-                            {[
-                                { icon: <FaGithub />, link: "https://github.com/poovesh07" },
-                                { icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/poovesh-v-249272281/" },
-                                { icon: <FaWhatsapp />, link: "https://wa.me/918015780957" },
-                                { icon: <FaEnvelope />, link: "mailto:poovesh057@gmail.com" },
-                            ].map((item, i) => (
-                                <a
-                                    key={i}
-                                    href={item.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-10 h-10 flex items-center justify-center rounded-full border border-[#8750F7] text-xl hover:bg-[#8750F7] hover:text-white transition duration-300"
-                                >
-                                    {item.icon}
-                                </a>
-                            ))}
-                        </div>
+                        {[
+                            { icon: <FaGithub />, link: "https://github.com/poovesh07" },
+                            { icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/poovesh-v-249272281/" },
+                            { icon: <FaWhatsapp />, link: "https://wa.me/918015780957" },
+                            { icon: <FaEnvelope />, link: "mailto:poovesh057@gmail.com" },
+                        ].map((item, i) => (
+                            <a
+                                key={i}
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 flex items-center justify-center rounded-full border border-[#8750F7] text-xl hover:bg-[#8750F7] hover:text-white transition duration-300"
+                            >
+                                {item.icon}
+                            </a>
+                        ))}
                     </div>
                 </div>
             </div>
