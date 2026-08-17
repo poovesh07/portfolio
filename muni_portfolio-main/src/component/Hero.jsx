@@ -11,7 +11,7 @@ import {
     FaUserGraduate,
 } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
-import poovesh from "../assets/poovesh.webp";
+import poovesh  from"../assets/poovesh80.png";
 import topcor from "../assets/top-right.webp";
 import "../App.css";
 
